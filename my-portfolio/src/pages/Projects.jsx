@@ -9,7 +9,8 @@ function Projects() {
       description:
         "Платформа для студентов, которые хотят получить образование за границей. Помогает выбирать страны и университеты.",
       technologies: ["React", "JavaScript", "CSS", "Supabase"],
-      status: "Завершён"
+      status: "Завершён",
+      link: "https://studing-abroad.vercel.app/"
     },
     {
       number: "02",
@@ -18,7 +19,8 @@ function Projects() {
       description:
         "Моё личное портфолио Frontend-разработчика. Здесь представлены мои навыки, проекты и контактная информация.",
       technologies: ["React", "JavaScript", "CSS"],
-      status: "В разработке"
+      status: "В разработке",
+      link: "https://my-portfolio1-gamma-jade.vercel.app/"
     }
   ];
 
@@ -29,6 +31,7 @@ function Projects() {
         <div className="projects-title">
           <p>МОИ РАБОТЫ</p>
           <h2>Мои <span>проекты</span></h2>
+
           <p className="projects-subtitle">
             Некоторые проекты, над которыми я работаю
           </p>
@@ -40,6 +43,7 @@ function Projects() {
             <div className="project-card" key={project.number}>
 
               <div className="project-top">
+
                 <span className="project-number">
                   {project.number}
                 </span>
@@ -47,6 +51,19 @@ function Projects() {
                 <span className="project-status">
                   {project.status}
                 </span>
+
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                    title="Открыть сайт"
+                  >
+                    ↗
+                  </a>
+                )}
+
               </div>
 
               <div className="project-content">

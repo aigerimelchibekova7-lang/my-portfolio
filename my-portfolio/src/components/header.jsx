@@ -4,11 +4,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-
         <a href="#home" className="logo">
-          AIGERIM
+          AIGE<span>RIM</span>
         </a>
-
         <nav className="nav">
           <a href="#home">Главная</a>
           <a href="#about">Обо мне</a>
@@ -16,7 +14,6 @@ function Header() {
           <a href="#projects">Проекты</a>
           <a href="#contact">Контакты</a>
         </nav>
-
         <a href="#contact" className="header-btn">
           Связаться со мной
         </a>
